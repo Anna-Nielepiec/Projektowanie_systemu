@@ -1,7 +1,6 @@
-# Projektowanie_systemu
+# SYSTEM DO OBSŁUGI SIECI PRZYCHODNI LEKARSKICH 
 
-SYSTEM DO OBSŁUGI SIECI PRZYCHODNI LEKARSKICH 
-
+Autorzy:
 Dorota Bober
 Anna Nielepiec
 Mateusz Ziarkiewicz
