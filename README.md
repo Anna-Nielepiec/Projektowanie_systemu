@@ -368,12 +368,12 @@ Kod SQL:
       /
 
 
-9. Diagram klas
+9. Diagram klas (wspólnie)
 
 ![diagramKlas](https://github.com/user-attachments/assets/47882a5c-6be7-4ba5-9626-8489aa8df317)
 
 
-10. Diagramy sekwencji
+10. Diagramy sekwencji (wspólnie)
 
 Zaplanowanie wizyty:
 
@@ -388,7 +388,7 @@ Wystawienie e-recepty:
 ![SekwWystawienieRecepty](https://github.com/user-attachments/assets/221a7f27-84b9-4bf0-9702-24fd7a93bbff)
 
 
-11. Diagramy stanów
+11. Diagramy stanów (wspólnie)
 
 Dla obiektu recepta:
 
@@ -398,12 +398,12 @@ Dla obiektu wizyta:
 
 ![StanWizyta](https://github.com/user-attachments/assets/8e2e9f2d-640c-4faf-9e53-dc4b72a2f057)
 
-12. Diagram wdrożenia
+12. Diagram wdrożenia (wspólnie)
 
 ![Wdrozenie](https://github.com/user-attachments/assets/f56f4513-e404-42c0-8faa-44943dae757e)
 
 
-13. Plan procesu testowania
+13. Plan procesu testowania (wspólnie)
 Cel testowania: Celem procesu testowania jest zapewnienie, że system do obsługi sieci przychodni lekarskich działa zgodnie z wymaganiami funkcjonalnymi i niefunkcjonalnymi oraz spełnia oczekiwania wszystkich grup użytkowników.
 Zakres testów:
     1. Testy jednostkowe (Unit Tests):
@@ -436,7 +436,7 @@ Oczekiwane wyniki:
     • Wszystkie kluczowe funkcje działają poprawnie. 
     • żadne krytyczne błędy nie występują w systemie. 
 
-14. Raport z analizy rynku
+14. Raport z analizy rynku (wspólnie)
 Cel analizy: Celem analizy rynku jest zidentyfikowanie konkurencyjnych rozwiązań i określenie potrzeb użytkowników w zakresie systemów obsługi przychodni lekarskich.
 1. Identyfikacja konkurencji: Na rynku dostępne są liczne systemy do zarządzania przychodniami, takie jak:
     • Medchart: System zintegrowany z e-receptami i dokumentacją medyczną, nastawiony na ułatwienie pracy lekarzy. 
