@@ -1,12 +1,11 @@
 # SYSTEM DO OBSŁUGI SIECI PRZYCHODNI LEKARSKICH 
 
 Autorzy:
-Dorota Bober
-Anna Nielepiec
+Dorota Bober,
+Anna Nielepiec,
 Mateusz Ziarkiewicz
 
-Informatyka, niestacjonarne, 3 rok
-Grupa 2
+Informatyka, niestacjonarne, 3 rok, grupa 2
 
 
 
