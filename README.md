@@ -18,8 +18,10 @@ Przedmiotem projektu jest system przeznaczony do obsługi sieci przychodni lekar
 Lekarze będą mieli ułatwienie w tworzeniu dokumentacji medycznej. Szybki dostęp do informacji na temat przebytych chorób pacjentów, przyjmowanych leków. 
 Projekt przyspieszy obsługę pacjentów czekających w kolejce i umożliwi przyjęcie większej ilości osób.
 
-3. Szczegółowy opis wymagań 
+2. Szczegółowy opis wymagań
+   
 a) Wymagania funkcjonalne: 
+
     • system umożliwia rejestrację i logowanie użytkowników, 
     • system wymaga podania roli każdego użytkownika, determinującej jego uprawnienia, 
     • system umożliwia personelowi dodanie pacjenta do Rejestru pacjentów poprzez ręczne wpisanie jego danych,
@@ -59,6 +61,7 @@ a) Wymagania funkcjonalne:
     • system obsługuje wysłanie rozliczeń do NFZ.
 
 b) Wymagania niefunkcjonalne: 
+
     • hasło powinno zawierać co najmniej 8 znaków, w tym minimum 1 cyfrę, znak specjalny, wielką literę,
     • działanie na różnych urządzeniach (responsywność),
     • spełnienie zasady WCAG 2.1 (dotępność strony dla osób z niepełnosprawnościami),
@@ -70,12 +73,14 @@ b) Wymagania niefunkcjonalne:
     • podgląd wydruków w PDF - obsługa Adobe Reader.
 
 3. Ograniczenia
+   
     • kompatybilność ze starszymi wersjami przeglądarek internetowych,
     • dokumenty i raporty w formacie dostosowanym do OpenOffice,
     • ograniczenia wynikające z szyfrowania danych wrażliwych,
     • czas realizacji projektu – 10 miesięcy.
 
 4. Użytkownicy systemu
+   
     • administrator systemu – prace konserwacyjne
     • pracownicy recepcji – rejestracja pacjentów w systemie; umawianie na wizyty; przygotowywanie terminarza,
     • lekarze – uzupełnianie dokumentacji medycznej; wystawianie recept, skierowań i zwolnień lekarskich
