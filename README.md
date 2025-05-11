@@ -135,10 +135,9 @@ Utworzenie skierowania:
 
 8. Diagram ERD (wspólnie)
 
-![Logical](https://github.com/user-attachments/assets/7f462b8e-4859-42d6-95ea-ee8469ca865c)
+![Logical_przychodnia](https://github.com/user-attachments/assets/10674d26-52ef-463c-b1b7-53f3a0bf92d5)
 
 Kod SQL:
-
 
       CREATE TABLE asoc_recepta_lek (
           id                  INTEGER NOT NULL,
@@ -237,16 +236,42 @@ Kod SQL:
       ALTER TABLE terminy ADD CONSTRAINT terminy_pk PRIMARY KEY ( id );
       
       CREATE TABLE użytkownicy (
-          id       INTEGER NOT NULL,
-          imie     VARCHAR2(50) NOT NULL,
-          nazwisko VARCHAR2(50) NOT NULL,
-          login    VARCHAR2(30) NOT NULL,
-          haslo    VARCHAR2(70) NOT NULL,
-          email    VARCHAR2(100) NOT NULL,
-          telefon  VARCHAR2(15) NOT NULL
+          id               INTEGER NOT NULL,
+          imie             VARCHAR2(50) NOT NULL,
+          nazwisko         VARCHAR2(50) NOT NULL,
+          login            VARCHAR2(30) NOT NULL,
+          haslo            VARCHAR2(70) NOT NULL,
+          email            VARCHAR2(100) NOT NULL,
+          telefon          VARCHAR2(15) NOT NULL,
+          role_id          INTEGER NOT NULL,
+          specjalizacje_id INTEGER NOT NULL
       );
       
       ALTER TABLE użytkownicy ADD CONSTRAINT użytkownicy_pk PRIMARY KEY ( id );
+      
+      CREATE TABLE wizyty (
+          id                         INTEGER NOT NULL,
+          data_wizyty                DATE NOT NULL,
+          rozpoznanie                CLOB,
+          uwagi                      CLOB,
+          choroby_id                 INTEGER,
+          wizyty_zaplanowane_id      INTEGER NOT NULL,
+          status_realizacji          CHAR(1) NOT NULL,
+          zarajestrowani_pacjenci_id INTEGER NOT NULL,
+          terminy_id                 INTEGER NOT NULL
+      );
+      
+      CREATE UNIQUE INDEX wizyty_zrealizowane__idx ON
+          wizyty (
+              wizyty_zaplanowane_id
+          ASC );
+      
+      CREATE UNIQUE INDEX wizyty__idx ON
+          wizyty (
+              terminy_id
+          ASC );
+      
+      ALTER TABLE wizyty ADD CONSTRAINT wizyty_zrealizowane_pk PRIMARY KEY ( id );
       
       CREATE TABLE wizyty_zaplanowane (
           id                         INTEGER NOT NULL,
@@ -261,22 +286,6 @@ Kod SQL:
           ASC );
       
       ALTER TABLE wizyty_zaplanowane ADD CONSTRAINT wizyty_zaplanowane_pk PRIMARY KEY ( id );
-      
-      CREATE TABLE wizyty_zrealizowane (
-          id                    INTEGER NOT NULL,
-          data_wizyty           DATE NOT NULL,
-          rozpoznanie           CLOB,
-          uwagi                 CLOB,
-          choroby_id            INTEGER,
-          wizyty_zaplanowane_id INTEGER NOT NULL
-      );
-      
-      CREATE UNIQUE INDEX wizyty_zrealizowane__idx ON
-          wizyty_zrealizowane (
-              wizyty_zaplanowane_id
-          ASC );
-      
-      ALTER TABLE wizyty_zrealizowane ADD CONSTRAINT wizyty_zrealizowane_pk PRIMARY KEY ( id );
       
       CREATE TABLE zarajestrowani_pacjenci (
           id             INTEGER NOT NULL,
@@ -324,7 +333,7 @@ Kod SQL:
       
       ALTER TABLE recepty
           ADD CONSTRAINT recepty_wizyty_zrealizowane_fk FOREIGN KEY ( wizyty_zrealizowane_id )
-              REFERENCES wizyty_zrealizowane ( id );
+              REFERENCES wizyty ( id );
       
       ALTER TABLE terminarze
           ADD CONSTRAINT terminarze_gebinety_fk FOREIGN KEY ( gebinety_gebinety_id )
@@ -338,6 +347,18 @@ Kod SQL:
           ADD CONSTRAINT terminy_terminarze_fk FOREIGN KEY ( terminarze_id )
               REFERENCES terminarze ( id );
       
+      ALTER TABLE użytkownicy
+          ADD CONSTRAINT użytkownicy_role_fk FOREIGN KEY ( role_id )
+              REFERENCES role ( id );
+      
+      ALTER TABLE użytkownicy
+          ADD CONSTRAINT użytkownicy_specjalizacje_fk FOREIGN KEY ( specjalizacje_id )
+              REFERENCES specjalizacje ( id );
+      
+      ALTER TABLE wizyty
+          ADD CONSTRAINT wizyty_terminy_fk FOREIGN KEY ( terminy_id )
+              REFERENCES terminy ( id );
+      
       ALTER TABLE wizyty_zaplanowane
           ADD CONSTRAINT wizyty_zaplanowane_terminy_fk FOREIGN KEY ( terminy_id )
               REFERENCES terminy ( id );
@@ -347,12 +368,17 @@ Kod SQL:
           ADD CONSTRAINT wizyty_zaplanowane_zarajestrowani_pacjenci_fk FOREIGN KEY ( zarajestrowani_pacjenci_id )
               REFERENCES zarajestrowani_pacjenci ( id );
       
-      ALTER TABLE wizyty_zrealizowane
+      --  ERROR: FK name length exceeds maximum allowed length(30) 
+      ALTER TABLE wizyty
+          ADD CONSTRAINT wizyty_zarajestrowani_pacjenci_fk FOREIGN KEY ( zarajestrowani_pacjenci_id )
+              REFERENCES zarajestrowani_pacjenci ( id );
+      
+      ALTER TABLE wizyty
           ADD CONSTRAINT wizyty_zrealizowane_choroby_fk FOREIGN KEY ( choroby_id )
               REFERENCES choroby ( id );
       
       --  ERROR: FK name length exceeds maximum allowed length(30) 
-      ALTER TABLE wizyty_zrealizowane
+      ALTER TABLE wizyty
           ADD CONSTRAINT wizyty_zrealizowane_wizyty_zaplanowane_fk FOREIGN KEY ( wizyty_zaplanowane_id )
               REFERENCES wizyty_zaplanowane ( id );
       
