@@ -72,25 +72,19 @@ b) Wymagania niefunkcjonalne:
     • lekarz musi posiadać pulę numerów recept żeby wystawić receptę,
     • podgląd wydruków w PDF - obsługa Adobe Reader.
 
-3. Ograniczenia: (wspólnie)
+3. Ograniczenia: (wspólnie):
    
-    • kompatybilność ze starszymi wersjami przeglądarek internetowych,
-   
-    • dokumenty i raporty w formacie dostosowanym do OpenOffice,
-   
-    • ograniczenia wynikające z szyfrowania danych wrażliwych,
-   
-    • czas realizacji projektu – 10 miesięcy.
+       • kompatybilność ze starszymi wersjami przeglądarek internetowych,
+       • dokumenty i raporty w formacie dostosowanym do OpenOffice,
+       • ograniczenia wynikające z szyfrowania danych wrażliwych,
+       • czas realizacji projektu – 10 miesięcy.
 
-5. Użytkownicy systemu (wspólnie)
+4. Użytkownicy systemu (wspólnie)
    
-   • administrator systemu – prace konserwacyjne,
-   
-   • pracownicy recepcji – rejestracja pacjentów w systemie; umawianie na wizyty; przygotowywanie terminarza,
-   
-   • lekarze – uzupełnianie dokumentacji medycznej; wystawianie recept, skierowań i zwolnień lekarskich,
-   
-   • pacjenci – umawianie się na wizyty, przeglądanie własnej dokumentacji medycznej
+         • administrator systemu – prace konserwacyjne,
+         • pracownicy recepcji – rejestracja pacjentów w systemie; umawianie na wizyty; przygotowywanie terminarza,
+         • lekarze – uzupełnianie dokumentacji medycznej; wystawianie recept, skierowań i zwolnień lekarskich,
+         • pacjenci – umawianie się na wizyty, przeglądanie własnej dokumentacji medycznej
 
 Przy określaniu wymagań kluczowym użytkownikiem jest lekarz kierujący placówką, w drugiej kolejności osoba odpowiedzialna za kierowanie recepcją, pacjenci mają najniższy priorytet.
 
