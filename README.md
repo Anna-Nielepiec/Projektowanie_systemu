@@ -101,7 +101,13 @@ Przy określaniu wymagań kluczowym użytkownikiem jest lekarz kierujący placó
 
 6. Scenariusze do wszystkich przypadków użycia (wspólnie)
 <img width="535" alt="Zrzut ekranu 2025-06-10 o 16 10 22" src="https://github.com/user-attachments/assets/e007e182-02f3-442f-a2b2-2afb35ec7f4d" />
-
+<img width="538" alt="Zrzut ekranu 2025-06-10 o 16 25 57" src="https://github.com/user-attachments/assets/3cb5f018-6dee-4fb4-a903-ac9d19de5df9" />
+<img width="548" alt="Zrzut ekranu 2025-06-10 o 16 27 36" src="https://github.com/user-attachments/assets/a1f2465c-7003-4e70-b5bf-c95eb670dc04" />
+<img width="532" alt="Zrzut ekranu 2025-06-10 o 16 27 56" src="https://github.com/user-attachments/assets/d46e65f9-d917-4036-9201-45d59e68afb2" />
+<img width="517" alt="Zrzut ekranu 2025-06-10 o 16 28 21" src="https://github.com/user-attachments/assets/90bebd92-b342-4305-a478-38c1a798e88a" />
+<img width="533" alt="Zrzut ekranu 2025-06-10 o 16 28 44" src="https://github.com/user-attachments/assets/b3b30479-fac5-4e2c-bb19-72b0128a9ab9" />
+<img width="529" alt="Zrzut ekranu 2025-06-10 o 16 28 59" src="https://github.com/user-attachments/assets/b6dbc318-e356-4df5-a65b-1970a584b196" />
+<img width="531" alt="Zrzut ekranu 2025-06-10 o 16 29 19" src="https://github.com/user-attachments/assets/cc1180d8-bb93-4021-80f3-41c8f1e64195" />
 
 
 7. Diagramy czynności (wspólnie)
