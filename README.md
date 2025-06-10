@@ -100,6 +100,8 @@ Przy określaniu wymagań kluczowym użytkownikiem jest lekarz kierujący placó
 
 
 6. Scenariusze do wszystkich przypadków użycia (wspólnie)
+<img width="535" alt="Zrzut ekranu 2025-06-10 o 16 10 22" src="https://github.com/user-attachments/assets/e007e182-02f3-442f-a2b2-2afb35ec7f4d" />
+
 
 
 7. Diagramy czynności (wspólnie)
